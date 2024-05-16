@@ -1,0 +1,159 @@
+body{
+  background-color:#e6f6fa;
+
+}
+.icon{
+  position:fixed;
+  top:50%;
+  left:50%;
+  width:75px; height:75px;
+  background:linear-gradient(to bottom,#faaa32 0%,#f0d49c 80%);
+  border-radius:10px;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.7);
+  transform:translate(-50%,-50%);
+  overflow: hidden;
+  
+ 
+}
+.water{
+  position:absolute;
+  object-fit: cover;
+  width:100px;
+  bottom:0;
+  background-color:rgba(0,190,150,0.4)
+   
+
+}
+.wave1{ /*中間那個*/
+  height:50px;
+  top:54px;
+  
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+  border-top-left-radius:100% 20px;
+  border-top-right-radius:100% 5px;
+  
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation: rotate3 7000ms infinite linear;
+  
+}
+.wave2{ /*最上面那個*/
+  height:50px;
+  top:50px;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  border-top-left-radius:100% 20px;
+  border-top-right-radius:100% 5px;
+  background-color:rgba(130,255,255,0.3);
+  
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation:  rotate2 7000ms infinite linear;
+  
+   
+}
+.wave3{
+  height:50px;
+  top:57px;
+  border-bottom-left-radius:15px;
+  border-bottom-right-radius:0px;
+  border-top-left-radius:100% 20px;
+  border-top-right-radius:100% 5px;
+  
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation: rotate2 9000ms infinite linear;
+  
+  background-color:rgba(0,160,150,0.3)
+}
+.boat{
+  position:absolute;
+  width:50px;
+  height:15px;
+  background:#e85b23;
+  left:50%;
+  top:50px;
+  transform:translate(-50%,-50%);
+  border-bottom-left-radius:40px;
+  border-bottom-right-radius:40px;
+  
+}
+.sail{
+  position:absolute;  
+  border-left:14px solid #edeae8;
+  border-top:18px solid rgba(0,0,0,0);
+  border-right:7px solid rgba(0,0,0,0);
+  border-bottom:10px solid #edeae8;
+  left:50%;
+  top:15px;
+  transform:translate(5%,0%);
+
+}
+.sail2{
+  position:absolute;
+  border-left:11px solid rgba(0,0,0,0);
+  border-top:11px solid rgba(0,0,0,0);
+  border-right:11px solid  #edeae8;
+  border-bottom:11px solid  #edeae8;
+  left:19%;
+  top:20px;
+  
+
+}
+.sailboat{
+  
+  animation-name:boatmove;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: transform 0.6s cubic-bezier(0.65, 0, 0.35, 0.35);
+
+  
+}
+@keyframes boatmove{
+  0%{transform: rotate(8deg);}
+  25%{transform: rotate(-3deg);}
+  50%{transform: rotate(6deg);}
+  75%{transform: rotate(-3deg);}
+  100%{transform: rotate(8deg);}
+}
+
+
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(10deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate2 {
+  0%{
+    transform: rotate(-3deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+  75%{transform: rotate(3deg);}
+  100%{
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes rotate3 {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(5deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
